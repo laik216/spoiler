@@ -1,0 +1,35 @@
+
+## JS и  CSS:
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.splLink').click(function(){
+      $(this).parent().children('div.splCont').toggle('normal');
+      return false;
+    });
+  });
+</script>
+<style>
+.spl1Cont{display:none;border:0px solid #cccccc;padding:0px 0px;}
+</style>
+
+
+
+## В /system/theme/templates/form-note.tmpl.php
+
+После: <? _JS ('form-note') ?>  (8 строка) вставить:
+
+<div  style="background-color:#f4f4f4; -webkit-border-radius: 10px; font-size:14px; padding-top:10px; max-height:120px; margin-bottom:10px;     -moz-border-radius: 10px; border-radius: 10px; max-width:600px; padding:15xp;">
+<b style="padding-left:15px; ">Если текст очень большой : </b>
+<iframe  frameborder="0" style="width:550px; padding-left:10px; "  src="/sp.txt"></iframe>
+</div>
+
+## В корень копируем файлик:
+
+http://yadi.sk/d/NjTknij519Ha0
+
+## В .htaccess по желанию:
+html
+Под DirectoryIndex index.php
+Вставить
+AddDefaultCharset windows-1251
